@@ -1,4 +1,3 @@
-// CRIO_SOLUTION_START_MODULE_ONE
 import { useContext } from "react"
 import { ThemeContext } from "../../theme/ThemeContext"
 import { Typography, Box, Stack, Button, useMediaQuery } from '@mui/material'
@@ -7,14 +6,21 @@ import { Link } from 'react-router-dom'
 import AddCommentIcon from '@mui/icons-material/AddComment';
 import CloseIcon from '@mui/icons-material/Close';
 
-export default function Sidebar({ setChat, closeMenu }) {
+export default function Sidebar({ chat, setChat, closeMenu }) {
 
     const { mode, setMode } = useContext(ThemeContext)
     const isMobile = useMediaQuery('(max-width:800px)')
 
-    const handleMode = () => {
-        setMode(prev => prev === 'light' ? 'dark' : 'light')
-    }
+    const handleSideBarClick = () => {
+        if(chat.length > 0) {
+            const chat_history = JSON.parse(localStorage.getItem('chat')) || []
+            const date = new Date()
+            localStorage.setItem('chat', JSON.stringify([{ chat: chat, datetime: date }, ...chat_history]))
+        }
+        
+        setChat([])
+        closeMenu()
+    };
 
     return (
         <Box >
@@ -26,7 +32,7 @@ export default function Sidebar({ setChat, closeMenu }) {
                     sx={{
                         width: 1,
                         justifyContent: 'flex-end',
-                        color: mode == 'light' ? 'primary.dark' :'text.primary'
+                        color: mode === 'light' ? 'primary.dark' :'text.primary'
                     }}
                     onClick={closeMenu}
                 >
@@ -36,10 +42,7 @@ export default function Sidebar({ setChat, closeMenu }) {
 
             <Link to={'/'} style={{ textDecoration: 'none' }}>
                 <Stack
-                    onClick={() => {
-                        setChat([])
-                        closeMenu()
-                    }}
+                    onClick={handleSideBarClick}
                     sx={{
                         bgcolor: 'primary.main',
                         '&:hover ': {
@@ -68,7 +71,7 @@ export default function Sidebar({ setChat, closeMenu }) {
                             fontSize={{xs:16, md:20}}
                             color={'text.primary'}
                         >
-                            New Chat
+                            New Query?
                         </Typography>
                     </Stack>
 
@@ -81,7 +84,7 @@ export default function Sidebar({ setChat, closeMenu }) {
                 <Link to={'/history'}>
                     <Button
                         variant="contained" sx={{ width: 1 }}
-                        onClick={closeMenu}
+                        onClick={handleSideBarClick}
                     >
                         Past Conversations
                     </Button>
@@ -91,4 +94,3 @@ export default function Sidebar({ setChat, closeMenu }) {
         </Box>
     )
 }
-// CRIO_SOLUTION_END_MODULE_ONE

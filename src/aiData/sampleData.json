@@ -198,5 +198,15 @@
     "id": 40,
     "question": "How can I provide feedback?",
     "response": "You can provide feedback through our website's 'Contact Us' section."
+  },
+  {
+    "id": 41,
+    "question": "Thankyou",
+    "response": "You're welcome! If you need further assistance, feel free to reach out. Have a great day!"
+  },
+  {
+    "id": 42,
+    "question": "Thanks",
+    "response": "You're welcome! If you need further assistance, feel free to reach out. Have a great day!"
   }
 ]

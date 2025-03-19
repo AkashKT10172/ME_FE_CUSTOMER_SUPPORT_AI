@@ -1,4 +1,3 @@
-// CRIO_SOLUTION_START_MODULE_ONE
 import { Box, Select, MenuItem, Typography } from '@mui/material'
 import { useEffect, useState } from 'react'
 
@@ -13,7 +12,7 @@ export default function ChatFilter({ allChats, filterChats }) {
     // FILTER CHATS
     useEffect(() => {
 
-        if (option == 'All Ratings') {
+        if (option === 'All Ratings') {
             filterChats(allChats)
         }
         else {
@@ -60,4 +59,3 @@ export default function ChatFilter({ allChats, filterChats }) {
         </Box>
     )
 }
-// CRIO_SOLUTION_END_MODULE_ONE

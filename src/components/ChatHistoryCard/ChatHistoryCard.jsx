@@ -1,5 +1,4 @@
-// CRIO_SOLUTION_START_MODULE_ONE
-import { Box, Typography, Stack, Divider, Chip } from '@mui/material'
+import { Box, Typography, Stack } from '@mui/material'
 import { format, isEqual, startOfDay, add } from 'date-fns'
 import ChattingCard from '../ChattingCard/ChattingCard'
 
@@ -39,4 +38,3 @@ export default function ChatHistoryCard({ details }) {
         </Box>
     )
 }
-// CRIO_SOLUTION_END_MODULE_ONE

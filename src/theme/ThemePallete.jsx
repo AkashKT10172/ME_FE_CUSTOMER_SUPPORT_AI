@@ -1,6 +1,3 @@
-// CRIO_SOLUTION_START_MODULE_ONE
-import { BorderColor } from "@mui/icons-material";
-
 export const getThemePallete = (mode) => ({
     palette: {
         mode,
@@ -94,4 +91,3 @@ export const getThemePallete = (mode) => ({
         },
     },
 })
-// CRIO_SOLUTION_END_MODULE_ONE

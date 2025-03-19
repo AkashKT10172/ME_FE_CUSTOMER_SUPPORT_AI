@@ -46,7 +46,7 @@ function App() {
             zIndex={{ xs: 9999, md: 1 }}
             boxShadow={{ xs: menuOpen ? 10 : 0, md: 0 }}
           >
-            <Sidebar setChat={setChat} closeMenu={() => setMenuOpen(false)} />
+            <Sidebar chat = {chat} setChat={setChat} closeMenu={() => setMenuOpen(false)} />
           </Grid>
           <Grid item xs={12} md={9.5}>
             <Outlet context={{ chat: chat, setChat: setChat, handleMobileMenu: setMenuOpen }} />

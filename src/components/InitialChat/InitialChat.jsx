@@ -1,4 +1,3 @@
-// CRIO_SOLUTION_START_MODULE_ONE
 import { Box, Typography, Stack, Grid } from '@mui/material'
 import icon from '../../assets/bot.png'
 import Card from './Card'
@@ -7,19 +6,19 @@ export default function InitialChat({ generateResponse }) {
 
     const initialData = [
         {
-            heading: 'Hi, what is the weather',
+            heading: 'Hello',
             subtext: 'Get immediate AI generated response'
         },
         {
-            heading: 'Hi, what is my location',
+            heading: 'My order has not arrived yet.',
             subtext: 'Get immediate AI generated response'
         },
         {
-            heading: 'Hi, what is the temperature',
+            heading: 'How can I reset my password?',
             subtext: 'Get immediate AI generated response'
         },
         {
-            heading: 'Hi, how are you',
+            heading: 'I am unable to log in to my account.',
             subtext: 'Get immediate AI generated response'
         },
     ]
@@ -33,7 +32,7 @@ export default function InitialChat({ generateResponse }) {
                 my={5}
             >
                 <Typography variant='h2'>
-                    How Can I Help You Today?
+                    Hi, Please tell me your query!
                 </Typography>
                 <Box
                     component={'img'}
@@ -54,4 +53,3 @@ export default function InitialChat({ generateResponse }) {
         </Stack>
     )
 }
-// CRIO_SOLUTION_END_MODULE_ONE

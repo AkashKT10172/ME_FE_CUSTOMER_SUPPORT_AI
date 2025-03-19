@@ -1,4 +1,3 @@
-// CRIO_SOLUTION_START_MODULE_ONE
 import { Typography, Stack, IconButton, useMediaQuery } from '@mui/material'
 import { Link, useOutletContext } from "react-router-dom";
 import MenuIcon from '@mui/icons-material/Menu';
@@ -39,7 +38,7 @@ export default function Navbar() {
                         variant='h1'
                         component={'h1'}
                     >
-                        Bot AI
+                        AI Customer Support
                     </Typography>
                 </Link>
             </Stack>
@@ -53,7 +52,7 @@ export default function Navbar() {
                     textTransform={'capitalize'}
                     fontSize={10}
                 >
-                    {mode}
+                    {isMobile ? '' : mode}
                 </Typography>
                 <IconButton onClick={() =>
                     setMode(prev => {
@@ -79,4 +78,3 @@ export default function Navbar() {
         </Stack>
     )
 }
-// CRIO_SOLUTION_END_MODULE_ONE

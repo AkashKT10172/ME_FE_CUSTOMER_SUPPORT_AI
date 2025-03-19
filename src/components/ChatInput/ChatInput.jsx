@@ -1,5 +1,4 @@
-// CRIO_SOLUTION_START_MODULE_ONE
-import { TextField, Box, Button, Stack, Snackbar, useMediaQuery } from '@mui/material'
+import { TextField, Box, Button, Stack, Snackbar } from '@mui/material'
 import { useEffect, useState, useRef } from 'react'
 import { Link } from 'react-router-dom'
 
@@ -41,7 +40,7 @@ export default function ChatInput({ generateResponse, setScroll, chat, clearChat
                     spacing={{ xs: .5, md: 2 }}
                 >
                     <TextField
-                        placeholder='Message Bot AI...'
+                        placeholder={chat.length == 0 ? 'Please tell me about your query!' : 'Anything Else?'}
                         sx={{
                             flex: 1,
                             bgcolor: 'primary.light',
@@ -104,4 +103,3 @@ export default function ChatInput({ generateResponse, setScroll, chat, clearChat
         </Box>
     )
 }
-// CRIO_SOLUTION_END_MODULE_ONE

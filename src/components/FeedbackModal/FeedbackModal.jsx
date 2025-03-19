@@ -1,4 +1,3 @@
-// CRIO_SOLUTION_START_MODULE_ONE
 import { Box, Stack, Typography, Modal, IconButton, TextField, Button } from '@mui/material'
 import FeedbackIcon from '@mui/icons-material/Feedback';
 import CloseIcon from '@mui/icons-material/Close';
@@ -90,4 +89,3 @@ export default function FeedbackModal({ open, handleClose, chatId, updateChat })
         </Modal>
     )
 }
-// CRIO_SOLUTION_END_MODULE_ONE

@@ -1,11 +1,9 @@
-// CRIO_SOLUTION_START_MODULE_ONE
 import { Box, Stack, Typography, IconButton, Rating } from '@mui/material'
 import ai from '../../assets/bot.png'
 import human from '../../assets/person.png'
 import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
 import ThumbDownOffAltIcon from '@mui/icons-material/ThumbDownOffAlt';
 import ThumbUpAltIcon from '@mui/icons-material/ThumbUpAlt';
-import ThumbDownAltIcon from '@mui/icons-material/ThumbDownAlt';
 import { useEffect, useState } from 'react';
 import { format } from 'date-fns';
 
@@ -61,7 +59,7 @@ export default function ChattingCard({ details, showFeedbackModal, updateChat, s
                     fontWeight={700}
                     fontSize={{ xs: 14, md: 16 }}
                 >
-                    {details.type == "AI" ? 'Soul AI' : 'You'}
+                    {details.type == "AI" ? 'Customer Support AI' : 'You'}
                 </Typography>
                 <Typography
                     fontSize={{ xs: 12, md: 16 }}
@@ -150,4 +148,3 @@ export default function ChattingCard({ details, showFeedbackModal, updateChat, s
         </Stack>
     )
 }
-// CRIO_SOLUTION_END_MODULE_ONE

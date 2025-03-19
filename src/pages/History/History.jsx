@@ -1,5 +1,4 @@
-// CRIO_SOLUTION_START_MODULE_ONE
-import { Typography, Box, Stack, Divider, Select, MenuItem } from '@mui/material'
+import { Typography, Box, Stack, Divider } from '@mui/material'
 import { useEffect, useState } from 'react'
 import ChatHistoryCard from '../../components/ChatHistoryCard/ChatHistoryCard'
 import ChatFilter from '../../components/ChatFilter/ChatFilter'
@@ -84,4 +83,3 @@ export default function History() {
         </Box>
     )
 }
-// CRIO_SOLUTION_END_MODULE_ONE

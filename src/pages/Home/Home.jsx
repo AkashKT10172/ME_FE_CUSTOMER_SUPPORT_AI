@@ -1,5 +1,4 @@
-// CRIO_SOLUTION_START_MODULE_ONE
-import { Box, Stack, Typography } from '@mui/material';
+import { Stack } from '@mui/material';
 import InitialChat from '../../components/InitialChat/InitialChat';
 import ChatInput from '../../components/ChatInput/ChatInput';
 import ChattingCard from '../../components/ChattingCard/ChattingCard';
@@ -111,4 +110,3 @@ export default function Home() {
         </Stack>
     )
 }
-// CRIO_SOLUTION_END_MODULE_ONE
